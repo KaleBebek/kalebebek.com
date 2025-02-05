@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KB Nexus</title>
-    <style>
-        /* Basic styles for the webpage */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Styles for the navigation bar */
-        nav {
-            background-color: #333; /* Dark background color */
-            padding: 10px 0;
-            text-align: center; /* Centers the navigation links */
-        }
-        
-        /* Styles for the navigation links */
-        nav a {
-            color: white; /* White text color */
-            text-decoration: none; /* Removes underline */
-            padding: 14px 20px;
-            display: inline-block; /* Makes links appear side by side */
-        }
-        
-        /* Changes background color of links when hovered over */
-        nav a:hover {
-            background-color: #575757;
-        }
-    </style>
+    <title>Welcome to KB Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation bar with links to different sections/pages -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="test.html">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
-    </nav>
-    
-    <!-- Main content section -->
-    <div style="padding: 20px; text-align: center;">
-        <h1>Welcome to KB Nexus</h1>
-        <p>Your content will go here.</p>
-    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="#">KB Nexus</a></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to KB Nexus</h1>
+            <p>Your path to innovative solutions.</p>
+            <a href="#services" class="cta-btn">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>KB Nexus is dedicated to providing top-notch solutions tailored to your needs. We strive to innovate and make a difference in everything we do.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>We create responsive, user-friendly websites that help your business grow.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consulting</h3>
+                <p>Our experts provide guidance to help you navigate complex challenges and achieve success.</p>
+            </div>
+            <div class="service-item">
+                <h3>Digital Marketing</h3>
+                <p>We craft personalized marketing strategies to help you connect with your audience effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 KB Nexus | <a href="https://www.instagram.com">Instagram</a> | <a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+    </footer>
 </body>
 </html>
