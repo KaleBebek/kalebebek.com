@@ -1,187 +1,78 @@
-/* General Styles */
-* {
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo a {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    font-size: 1rem;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.nav-links a:hover {
-    background: #f0f0f0;
-    color: #333;
-}
-
-/* Hero Section */
-.hero {
-    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 120px 20px;
-    margin-top: 80px; /* Push content below fixed navbar */
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    background: #e60000;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    color: #fff;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.cta-btn:hover {
-    background: #333;
-}
-
-/* About Section */
-.about {
-    padding: 50px 20px;
     background-color: #f4f4f4;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* Services Section */
-.services {
-    padding: 50px 20px;
+/* Navigation Bar */
+nav {
+    position: fixed;
+    background-color: #333;
+    padding: 15px;
     text-align: center;
 }
 
-.services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.service-item {
-    margin-bottom: 40px;
+nav a:hover {
+    color: #ffcc00;
 }
 
-.service-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+/* Login Form Styling */
+#login-form {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 100px auto;
 }
 
-.service-item p {
-    font-size: 1.1rem;
+#login-form h2 {
+    margin-bottom: 15px;
+    color: #333;
 }
 
-/* Contact Form Section */
-.contact {
-    padding: 50px 20px;
-    background-color: #eaeaea;
-}
-
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact input,
-.contact textarea {
-    margin-bottom: 20px;
+#password {
+    width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-.contact button {
-    background-color: #e60000;
-    color: #fff;
-    padding: 10px;
+button {
+    background-color: #333;
+    color: white;
     border: none;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.contact button:hover {
-    background-color: #333;
+button:hover {
+    background-color: #ffcc00;
+    color: #333;
 }
 
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Protected Content Styling */
+#protected-content {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
     padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #fff;
-    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
