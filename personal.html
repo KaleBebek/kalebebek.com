@@ -36,12 +36,12 @@
 
         // 🔹 Firebase Configuration (Replace with your actual values)
         const firebaseConfig = {
-          apiKey: "AIzaSyBADuf9znyprVCwOmn1vocjIiOsnrIkekc",
-          authDomain: "kalebebeksite.firebaseapp.com",
-          projectId: "kalebebeksite",
-          storageBucket: "kalebebeksite.firebasestorage.app",
-          messagingSenderId: "645799759143",
-          appId: "1:645799759143:web:6f6b679b03c9619271ed02"
+            apiKey: "YOUR_API_KEY",
+            authDomain: "your-project-id.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project-id.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
         };
 
         // 🔹 Initialize Firebase
@@ -50,11 +50,26 @@
 
         // 🔹 Approved Users List
         const approvedEmails = [
-            "kalebebek@gmail.com",
-            "britneyfox99@gmail.com"
+            "your-email@example.com",
+            "family-member@example.com"
         ];
 
-        // 🔹 Login Function
+        // 🔹 Function to update UI based on auth state
+        function updateUI(user) {
+            if (user && approvedEmails.includes(user.email)) {
+                // ✅ User is approved → Show protected content
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("protected-content").style.display = "block";
+                document.getElementById("logout-btn").style.display = "inline";
+            } else {
+                // ❌ User is not logged in → Show login form
+                document.getElementById("login-form").style.display = "block";
+                document.getElementById("protected-content").style.display = "none";
+                document.getElementById("logout-btn").style.display = "none";
+            }
+        }
+
+        // 🔹 Login Function (No Reload)
         window.login = function() {
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
@@ -63,49 +78,33 @@
                 .then((userCredential) => {
                     const user = userCredential.user;
 
-                    // 🔹 Check if user is approved
+                    // ✅ Check if user is approved
                     if (!approvedEmails.includes(user.email)) {
                         alert("Access denied: This account is not approved.");
                         signOut(auth);
                         return;
                     }
 
-                    // ✅ Successful login - Reload page
-                    location.reload();
+                    // ✅ Seamless login → Update UI immediately
+                    updateUI(user);
                 })
                 .catch((error) => {
                     alert("Login failed: " + error.message);
                 });
         };
 
-        // 🔹 Logout Function
+        // 🔹 Logout Function (No Reload)
         window.logout = function() {
             signOut(auth).then(() => {
-                location.reload();
+                updateUI(null);
             });
         };
 
         // 🔹 Handle Authentication State Changes
         onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // Check if user is approved
-                if (!approvedEmails.includes(user.email)) {
-                    alert("Access denied: This account is not approved.");
-                    signOut(auth);
-                    return;
-                }
-
-                // ✅ Show protected content and logout button
-                document.getElementById("login-form").style.display = "none";
-                document.getElementById("protected-content").style.display = "block";
-                document.getElementById("logout-btn").style.display = "inline";
-            } else {
-                // ❌ Hide protected content and show login form
-                document.getElementById("login-form").style.display = "block";
-                document.getElementById("protected-content").style.display = "none";
-                document.getElementById("logout-btn").style.display = "none";
-            }
+            updateUI(user);
         });
+
     </script>
 </body>
 </html>
