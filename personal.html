@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <style>
+        #protected-content { display: none; } /* Hide content until login */
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="personal.html">Personal</a> <!-- Private Page -->
+        <button onclick="logout()" style="display: none;" id="logout-btn">Logout</button>
+    </nav>
+
+    <!-- Login Form (Shown Only If Not Logged In) -->
+    <div id="login-form">
+        <h2>Login to View This Page</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Protected Content (Hidden Until Login) -->
+    <div id="protected-content">
+        <h2>Welcome to Your Personal Page</h2>
+        <p>This content is only visible after login.</p>
+    </div>
+
+    <script>
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBADuf9znyprVCwOmn1vocjIiOsnrIkekc",
+            authDomain: "kalebebeksite.firebaseapp.com",
+            projectId: "kalebebeksite",
+            storageBucket: "kalebebeksite.firebasestorage.app",
+            messagingSenderId: "645799759143",
+            appId: "1:645799759143:web:6f6b679b03c9619271ed02"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // 🔹 Check if the user is pre-approved
+                const approvedEmails = [
+                    "kalebebek@gmail.com",
+                    "britneyfox99@gmail.com"
+                ];
+
+                if (!approvedEmails.includes(user.email)) {
+                    alert("Access denied: This account is not approved.");
+                    firebase.auth().signOut(); // Log them out immediately
+                    return;
+                }
+
+                // User is logged in - show content
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("protected-content").style.display = "block";
+                document.getElementById("logout-btn").style.display = "inline";
+            } else {
+                // User is NOT logged in - show login form
+                document.getElementById("login-form").style.display = "block";
+                document.getElementById("protected-content").style.display = "none";
+                document.getElementById("logout-btn").style.display = "none";
+            }
+        });
+
+        function login() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    let user = userCredential.user;
+
+                    // 🔹 Check if the user is pre-approved
+                    const approvedEmails = [
+                        "kalebebek@gmail.com",
+                        "britneyfox99@gmail.com"
+                    ];
+
+                    if (!approvedEmails.includes(user.email)) {
+                        alert("Access denied: This account is not approved.");
+                        firebase.auth().signOut(); // Log them out immediately
+                        return;
+                    }
+
+                    location.reload(); // Refresh to unlock page
+                })
+                .catch((error) => {
+                    alert("Login failed: " + error.message);
+                });
+        }
+
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                location.reload(); // Refresh to lock page again
+            });
+        }
+    </script>
+</body>
+</html>
 
