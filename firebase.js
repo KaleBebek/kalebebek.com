@@ -50,11 +50,21 @@ window.login = function() {
 
 // 🔹 Logout Function (No Reload)
 window.logout = function() {
-    document.getElementById('login-form').reset();
-    // Optionally, clear the password field explicitly (though reset() should do this)
-    document.getElementById('password').value = '';
     signOut(auth).then(() => {
-        updateUI(null); // Simply hide the content and show the login form
+        console.log("Signed out successfully.");
+
+        // Clear form fields
+        document.getElementById('login-form').reset();
+        document.getElementById('password').value = '';
+
+        // Clear session/local storage
+        sessionStorage.clear();
+        localStorage.clear();
+
+        // Ensure UI is updated
+        updateUI(null);
+    }).catch((error) => {
+        console.error("Sign out error:", error);
     });
 };
 
