@@ -28,9 +28,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%; /* Adjust container width */
-    max-width: 1200px; /* Maximum width for larger screens */
-    margin: 0 auto; /* Center the container */
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Add some padding to prevent content from touching the edges */
+    margin: 0; /* Remove margin */
 }
 
 .navbar .logo img {
