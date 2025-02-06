@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #222222;
+    color: #333;
     background-color: #f5f5f5; /* Light gray background */
 }
 
@@ -25,7 +25,7 @@ body {
 .navbar {
     background-color: #333; /* Dark background */
     border-bottom: 3px solid #ff0000; /* Red trim at the bottom */
-    padding: 5px 0; /* Reduced padding to make the navbar skinnier */
+    padding: 2px 0; /* Reduced padding to make the navbar skinnier */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -47,6 +47,7 @@ body {
 .navbar .logo img {
     height: 75px; /* Slightly smaller logo */
     width: auto;
+    margin: 0;
 }
 
 /* Navigation links */
@@ -104,11 +105,13 @@ body {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: #000000;
 }
 
 .hero .btn {
