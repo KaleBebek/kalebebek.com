@@ -116,66 +116,81 @@ body {
 .footer p {
     margin: 0;
 }
-/* Login Form Styling */
-#login-form {
-    width: 300px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 100px auto;
-    text-align: center; /* Center everything inside */
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust as needed */
 }
 
-/* Ensure input stays inside the box */
-#login-form input {
-    width: calc(100% - 20px); /* Makes sure it fits inside */
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
 #login-form h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 24px;
     color: #333;
 }
 
-#password {
+#login-form input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 
-button {
-    background-color: #333;
-    color: white;
+#login-form .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ffcc00;
-    color: #333;
+#login-form .btn:hover {
+    background-color: #0056b3;
 }
 
-/* Protected Content Styling */
-#protected-content {
-    width: 80%;
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Protected Content */
+.protected-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.protected-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.protected-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.protected-container .btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.protected-container .btn:hover {
+    background-color: #c82333;
 }
