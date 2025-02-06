@@ -49,7 +49,7 @@ body {
 
 /* Logo styling */
 .navbar .logo img {
-    height: 70px; /* Set logo height */
+    height: 60px; /* Set logo height */
     width: auto;  /* Maintain aspect ratio */
 }
 
