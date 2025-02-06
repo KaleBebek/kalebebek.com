@@ -17,7 +17,7 @@ body {
 .navbar {
     background-color: #333; /* Dark background */
     border-bottom: 3px solid #ff0000; /* Red trim at the bottom */
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding to make the navbar skinnier */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -28,11 +28,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%; /* Adjust container width */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
 }
 
 .navbar .logo img {
-    height: 50px;
+    height: 40px; /* Slightly smaller logo */
     width: auto;
+    margin-left: 0; /* Ensure logo is flush to the left */
 }
 
 .navbar .nav-links {
@@ -40,10 +44,11 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center; /* Align buttons vertically */
 }
 
 .navbar .nav-links li {
-    margin-left: 30px;
+    margin-left: 20px; /* Reduced spacing between buttons */
 }
 
 .navbar .nav-links a {
@@ -51,7 +56,7 @@ body {
     color: #fff; /* White text */
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 15px; /* Padding for button-like appearance */
+    padding: 8px 12px; /* Slightly smaller padding for skinnier buttons */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
