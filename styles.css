@@ -34,7 +34,7 @@ body {
 }
 
 .navbar .logo img {
-    height: 50px; /* Slightly smaller logo */
+    height: 40px; /* Slightly smaller logo */
     width: auto;
     margin-left: 0; /* Ensure logo is flush to the left */
 }
