@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Add some padding to prevent content from touching the edges */
     margin: 0 auto;
 }
 
