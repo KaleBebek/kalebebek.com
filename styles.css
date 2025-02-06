@@ -26,7 +26,7 @@ body {
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo on the left, buttons on the right */
     align-items: center;
     width: 100%; /* Full width */
     padding: 0 20px; /* Add some padding to prevent content from touching the edges */
@@ -34,7 +34,7 @@ body {
 }
 
 .navbar .logo img {
-    height: 40px; /* Slightly smaller logo */
+    height: 50px; /* Slightly smaller logo */
     width: auto;
     margin-left: 0; /* Ensure logo is flush to the left */
 }
@@ -45,6 +45,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center; /* Align buttons vertically */
+    margin-left: auto; /* Push buttons to the right */
 }
 
 .navbar .nav-links li {
