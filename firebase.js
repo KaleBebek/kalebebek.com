@@ -53,9 +53,11 @@ window.logout = function() {
     signOut(auth).then(() => {
         console.log("Signed out successfully.");
 
-        // Clear form fields
-        document.getElementById('login-form').reset();
-        document.getElementById('password').value = '';
+        // Manually clear the password input
+        const passwordField = document.getElementById('password');
+        if (passwordField) {
+            passwordField.value = '';  // Clears the password field
+        }
 
         // Clear session/local storage
         sessionStorage.clear();
