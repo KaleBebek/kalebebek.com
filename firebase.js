@@ -51,6 +51,8 @@ window.login = function() {
 // 🔹 Logout Function (No Reload)
 window.logout = function() {
     document.getElementById('login-form').reset();
+    // Optionally, clear the password field explicitly (though reset() should do this)
+    document.getElementById('password').value = '';
     signOut(auth).then(() => {
         updateUI(null); // Simply hide the content and show the login form
     });
