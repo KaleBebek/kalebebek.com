@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #222222;
     background-color: #f5f5f5; /* Light gray background */
 }
 
@@ -45,7 +45,7 @@ body {
 
 /* Logo styling */
 .navbar .logo img {
-    height: 50px; /* Slightly smaller logo */
+    height: 75px; /* Slightly smaller logo */
     width: auto;
 }
 
