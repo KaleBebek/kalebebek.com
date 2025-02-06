@@ -50,7 +50,7 @@ window.login = function() {
 
 // 🔹 Logout Function (No Reload)
 window.logout = function() {
-    document.getElementById('loginForm').reset();
+    document.getElementById('login-form').reset();
     signOut(auth).then(() => {
         updateUI(null); // Simply hide the content and show the login form
     });
