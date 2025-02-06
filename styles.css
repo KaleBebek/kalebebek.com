@@ -15,12 +15,13 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Dark background */
+    border-bottom: 3px solid #ff0000; /* Red trim at the bottom */
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .navbar .container {
@@ -47,14 +48,16 @@ body {
 
 .navbar .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #fff; /* White text */
     font-size: 16px;
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 10px 15px; /* Padding for button-like appearance */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 .navbar .nav-links a:hover {
-    color: #007BFF;
+    background-color: #ff0000; /* Red background on hover */
 }
 
 /* Hero Section */
