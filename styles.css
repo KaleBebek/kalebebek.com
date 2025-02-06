@@ -25,12 +25,15 @@ body {
 .navbar {
     background-color: #333; /* Dark background */
     border-bottom: 3px solid #ff0000; /* Red trim at the bottom */
-    padding: 2px 0; /* Reduced padding to make the navbar skinnier */
+    padding: 3px 0; /* Only 3px padding above and below */
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     width: 100%;
+    display: flex;
+    align-items: center; /* Keeps items vertically aligned */
+    height: auto; /* Only as tall as its content */
 }
 
 /* Ensure navbar container has max-width */
@@ -41,13 +44,13 @@ body {
     align-items: center;
     padding: 0 15px; /* Prevents content from going off-screen */
     margin: 0 auto;
+    height: 100%; /* Ensures navbar doesn't expand */
 }
 
 /* Logo styling */
 .navbar .logo img {
-    height: 75px; /* Slightly smaller logo */
-    width: auto;
-    margin: 0;
+    height: 70px; /* Set logo height */
+    width: auto;  /* Maintain aspect ratio */
 }
 
 /* Navigation links */
@@ -92,7 +95,6 @@ body {
         margin-top: 10px;
     }
 }
-
 
 /* Hero Section */
 .hero {
