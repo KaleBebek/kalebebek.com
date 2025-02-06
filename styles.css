@@ -1,15 +1,23 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Apply box-sizing globally to prevent width issues */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
 }
 
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* General container styling */
 .container {
-    width: 100%; /* Full width */
-    padding: 0 20px; /* Add some padding to prevent content from touching the edges */
+    max-width: 1200px; /* Prevents elements from stretching too wide */
+    width: 100%;
+    padding: 0 20px; /* Keeps content from touching screen edges */
     margin: 0 auto;
 }
 
@@ -22,36 +30,39 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    width: 100%;
 }
 
+/* Ensure navbar container has max-width */
 .navbar .container {
+    max-width: 1200px; /* Matches the general .container */
     display: flex;
     justify-content: space-between; /* Logo on the left, buttons on the right */
     align-items: center;
-    width: 100%; /* Full width */
-    padding: 0 20px; /* Add some padding to prevent content from touching the edges */
-    margin: 0; /* Remove margin */
+    padding: 0 15px; /* Prevents content from going off-screen */
+    margin: 0 auto;
 }
 
+/* Logo styling */
 .navbar .logo img {
-    height: 40px; /* Slightly smaller logo */
+    height: 50px; /* Slightly smaller logo */
     width: auto;
-    margin-left: 0; /* Ensure logo is flush to the left */
 }
 
+/* Navigation links */
 .navbar .nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    align-items: center; /* Align buttons vertically */
-    margin-left: auto; /* Push buttons to the right */
+    align-items: center;
+    gap: 20px; /* Spacing between buttons */
 }
 
+/* Each navigation item */
 .navbar .nav-links li {
-    margin-left: 20px; /* Reduced spacing between buttons */
+    display: inline-block;
 }
 
+/* Links */
 .navbar .nav-links a {
     text-decoration: none;
     color: #fff; /* White text */
@@ -59,12 +70,28 @@ body {
     font-weight: 500;
     padding: 8px 12px; /* Slightly smaller padding for skinnier buttons */
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease;
 }
 
+/* Hover effect */
 .navbar .nav-links a:hover {
     background-color: #ff0000; /* Red background on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
 
 /* Hero Section */
 .hero {
