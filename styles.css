@@ -13,21 +13,8 @@ body {
     background-color: #a74d4d; /* Light gray background */
 }
 
-/* Main container to center content */
-.main-container {
-    max-width: 1200px; /* Adjust as needed */
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
-    margin: auto; /* Center the container */
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh; /* Ensure full viewport height */
-}
-
-/* General container styling */
-.container {
+/* #region Nav Section */
+.nav-container {
     max-width: 1200px; /* Prevents elements from stretching too wide */
     width: 100%;
     padding: 0 20px; /* Keeps content from touching screen edges */
@@ -109,21 +96,115 @@ body {
         margin-top: 10px;
     }
 }
+/* #endregion Nav Section */
 
-/* Content Section */
-.content {
-    padding: 60px 0;
+
+/* Main container to center content */
+.main-container {
+    max-width: 1200px; /* Adjust as needed */
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    margin: auto; /* Center the container */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
-.content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+/* #region Home Section */
+.home-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px; /* Prevents elements from stretching too wide */
+    padding: 40px;
 }
 
-.content p {
-    font-size: 18px;
-    line-height: 1.8;
+.left-section {
+    text-align: center;
 }
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.middle-section {
+    text-align: left;
+    max-width: 400px;
+}
+
+.middle-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.middle-section p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 200px;
+    background-color: #000000;
+}
+
+.right-section {
+    max-width: 400px;
+}
+
+.right-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center everything */
+        text-align: center;
+    }
+
+    .vertical-line {
+        display: none; /* Hide the vertical line on mobile */
+    }
+
+    .profile-pic {
+        width: 120px; /* Reduce size for smaller screens */
+        height: 120px;
+    }
+
+    .social-links a img {
+        width: 25px; /* Reduce social icons size */
+        height: 25px;
+    }
+
+    .middle-section,
+    .right-section {
+        max-width: 90%; /* Ensure better fit */
+    }
+}
+/* #endregion Home Section */
 
 /* Footer */
 .footer {
@@ -216,95 +297,3 @@ body {
 }
 
 
-/* Home Page */
-.home-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px; /* Prevents elements from stretching too wide */
-    padding: 40px;
-}
-
-.left-section {
-    text-align: center;
-}
-
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-}
-
-.middle-section {
-    text-align: left;
-    max-width: 400px;
-}
-
-.middle-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-.middle-section p {
-    font-size: 1rem;
-    color: #000000;
-}
-
-.vertical-line {
-    width: 2px;
-    height: 200px;
-    background-color: #000000;
-}
-
-.right-section {
-    max-width: 400px;
-}
-
-.right-section h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.right-section p {
-    font-size: 1rem;
-    color: #000000;
-}
-
-/* Make it responsive for smaller screens */
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center everything */
-        text-align: center;
-    }
-
-    .vertical-line {
-        display: none; /* Hide the vertical line on mobile */
-    }
-
-    .profile-pic {
-        width: 120px; /* Reduce size for smaller screens */
-        height: 120px;
-    }
-
-    .social-links a img {
-        width: 25px; /* Reduce social icons size */
-        height: 25px;
-    }
-
-    .middle-section,
-    .right-section {
-        max-width: 90%; /* Ensure better fit */
-    }
-}
