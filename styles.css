@@ -253,9 +253,6 @@ body {
 .left-section {
     text-align: center;
 }
-.left-text {
-    text-align: center;
-}
 
 .profile-pic {
     width: 200px;
@@ -272,6 +269,21 @@ body {
     width: 30px;
     height: 30px;
     margin: 0 10px;
+}
+
+.middle-section {
+    text-align: left;
+    max-width: 300px;
+}
+
+.middle-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.middle-section p {
+    font-size: 1rem;
+    color: #000000;
 }
 
 .vertical-line {
