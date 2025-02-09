@@ -227,6 +227,7 @@ body {
 
 .left-section {
     text-align: center;
+    align-content: center;
 }
 
 .profile-pic {
@@ -248,7 +249,7 @@ body {
 
 .middle-section {
     text-align: left;
-    max-width: 300px;
+    align-content: center;
 }
 
 .middle-section h2 {
@@ -268,7 +269,7 @@ body {
 }
 
 .right-section {
-    max-width: 400px;
+    align-content: center;
 }
 
 .right-section h1 {
