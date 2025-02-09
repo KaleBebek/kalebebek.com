@@ -281,3 +281,31 @@ body {
     font-size: 1rem;
     color: #000000;
 }
+
+/* Make it responsive for smaller screens */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center everything */
+        text-align: center;
+    }
+
+    .vertical-line {
+        display: none; /* Hide the vertical line on mobile */
+    }
+
+    .profile-pic {
+        width: 120px; /* Reduce size for smaller screens */
+        height: 120px;
+    }
+
+    .social-links a img {
+        width: 25px; /* Reduce social icons size */
+        height: 25px;
+    }
+
+    .middle-section,
+    .right-section {
+        max-width: 90%; /* Ensure better fit */
+    }
+}
