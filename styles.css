@@ -243,7 +243,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 500px;
     padding: 40px;
 }
 
@@ -252,8 +252,8 @@ body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -271,7 +271,7 @@ body {
 .vertical-line {
     width: 2px;
     height: 150px;
-    background-color: #ccc;
+    background-color: #000000;
 }
 
 .right-section {
@@ -285,5 +285,5 @@ body {
 
 .right-section p {
     font-size: 1rem;
-    color: #333;
+    color: #000000;
 }
