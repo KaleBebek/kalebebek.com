@@ -249,7 +249,7 @@ body {
 
 .middle-section {
     text-align: left;
-    align-content: center;
+    max-width: 400px;
 }
 
 .middle-section h2 {
@@ -269,7 +269,7 @@ body {
 }
 
 .right-section {
-    align-content: center;
+    max-width: 400px;
 }
 
 .right-section h1 {
