@@ -19,11 +19,10 @@ body {
     width: 100%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
-    margin: 0;
-    padding: 0;
+    margin: 20px auto; /* Center the container */
+    padding: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh; /* Ensure full viewport height */
 }
 
