@@ -243,17 +243,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 500px;
-    padding: 40px;
+    gap: 250px;
+    max-width: 1200px; /* Prevents elements from stretching too wide */
+    width: 100%;
+    padding: 0 20px; /* Keeps content from touching screen edges */
+    margin: 0 auto;
 }
 
 .left-section {
     text-align: center;
 }
+.left-text {
+    text-align: center;
+}
 
 .profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -270,7 +276,7 @@ body {
 
 .vertical-line {
     width: 2px;
-    height: 150px;
+    height: 200px;
     background-color: #000000;
 }
 
