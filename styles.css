@@ -254,7 +254,6 @@ body {
 /* Home Page */
 .home-container {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 40px;
     max-width: 1200px; /* Prevents elements from stretching too wide */
