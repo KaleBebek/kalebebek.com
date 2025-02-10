@@ -48,7 +48,7 @@ window.login = function() {
         });
 };
 
-// 🔹 Logout Function (No Reload)
+// 🔹 Logout Function
 window.logout = function() {
     signOut(auth).then(() => {
         console.log("Signed out successfully.");
