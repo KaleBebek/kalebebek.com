@@ -27,7 +27,7 @@ function updateUI(user) {
     } else {
         // ❌ User is not logged in → Show login form
         document.getElementById("login-form").style.display = "block";
-        document.querySelector(".login-container").style.display = "block";
+        document.querySelector(".login-container").style.display = "flex"; // Restore space
         document.getElementById("protected-content").style.display = "none";
         document.getElementById("logout-btn").style.display = "none";
     }
