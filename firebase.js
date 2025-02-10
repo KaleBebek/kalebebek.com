@@ -21,11 +21,13 @@ function updateUI(user) {
     if (user) {
         // ✅ User is logged in → Show protected content
         document.getElementById("login-form").style.display = "none";
+        document.querySelector(".login-container").style.display = "none"; // Remove space
         document.getElementById("protected-content").style.display = "block";
         document.getElementById("logout-btn").style.display = "inline";
     } else {
         // ❌ User is not logged in → Show login form
         document.getElementById("login-form").style.display = "block";
+        document.querySelector(".login-container").style.display = "block";
         document.getElementById("protected-content").style.display = "none";
         document.getElementById("logout-btn").style.display = "none";
     }
