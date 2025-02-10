@@ -263,21 +263,6 @@ body {
 /* #endregion Login Section */
 
 /* #region Protected Content */
-.protected-container {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.protected-container h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.protected-container p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
 .protected-container .btn {
     background-color: #dc3545;
     color: #fff;
