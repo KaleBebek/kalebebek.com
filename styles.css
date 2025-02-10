@@ -103,7 +103,7 @@ body {
 /* #endregion Nav Section */
 
 
-/* Main container to center content */
+/* Main container */
 .main-container {
     max-width: 1200px; /* Adjust as needed */
     width: 100%;
@@ -120,6 +120,7 @@ body {
 .home-container {
     display: flex;
     justify-content: center;
+    align-content: center;
     gap: 40px;
     max-width: 1200px; /* Prevents elements from stretching too wide */
     padding: 40px;
@@ -210,17 +211,7 @@ body {
 }
 /* #endregion Home Section */
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer p {
-    margin: 0;
-}
+/* #region Login Section */
 /* Login Container */
 .login-container {
     display: flex;
@@ -269,8 +260,9 @@ body {
 #login-form .btn:hover {
     background-color: #0056b3;
 }
+/* #endregion Login Section */
 
-/* Protected Content */
+/* #region Protected Content */
 .protected-container {
     text-align: center;
     padding: 50px 20px;
@@ -300,4 +292,16 @@ body {
     background-color: #c82333;
 }
 
+/* #endregion Protected Content */
 
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.footer p {
+    margin: 0;
+}
